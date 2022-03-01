@@ -21,7 +21,7 @@ router.post("/", async (req, res) => {
     res.json({
         status:200,
         data: vinyl
-    })
+    });
 });
 
 module.exports = router;
