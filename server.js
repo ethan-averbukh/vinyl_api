@@ -15,6 +15,6 @@ app.use(cors());
 const vinylController = require('./controllers/vinylController.js');
 app.use('/vinyls', vinylController);
 
-app.listen(PORT, ()=>{
+app.listen(PORT, ()=> {
     console.log(`Listening on port: ${PORT}`);
 })
