@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Vinyl = require("../models/vinylSchema.js");
+const Vinyl = require("../models/Vinyl.js");
 
 router.get("/", async (req, res) => {
   const vinyls = await Vinyl.find({});
