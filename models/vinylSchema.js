@@ -1,4 +1,4 @@
-const mongoose = require('../db/connection.js');
+const {connection, mongoose} = require('../db/connection.js');
 
 const Schema = mongoose.Schema;
 
@@ -7,4 +7,4 @@ const vinylsSchema = new Schema({
     album: String
 });
 
-module.exports = mongoose.model('Vinyl', vinylsSchema);
+module.exports = connection.model('Vinyl', vinylsSchema);
