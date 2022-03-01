@@ -23,5 +23,12 @@ router.post("/", async (req, res) => {
         data: vinyl
     });
 });
+router.delete('/:id', async (req,res)=>{
+    const deletedVinyl = await Vinyl.findByIdAndDelete(req.params.id);
+    res.json({
+        status: 200,
+        msg: `Selected Vinyl was deleted: ${deletedVinyl}`
+    })
+})
 
 module.exports = router;
