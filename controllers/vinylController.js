@@ -23,6 +23,17 @@ router.post("/", async (req, res) => {
         data: vinyl
     });
 });
+
+//Update selected document based on id of document
+router.patch('/vinylUpdate/:id', async (req, res)=>{
+    const updatedVinyl = await Vinyl.findByIdAndUpdate(req.params.id, req.body, {new:true});
+    res.json({
+        status: 200,
+        msg: `Selected Vinyl was updated: ${updatedVinyl}`
+    })
+
+})
+// Delete selected vinyl based on id of document.
 router.delete('/:id', async (req,res)=>{
     const deletedVinyl = await Vinyl.findByIdAndDelete(req.params.id);
     res.json({
