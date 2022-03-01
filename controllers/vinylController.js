@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
   });
 });
 
-//req.body is allowed because of the middleware functionality
+//req.body is allowed because of the middleware functionality (express.json)
 router.post("/", async (req, res) => {
     const vinyl = req.body;
     await Vinyl.create({
